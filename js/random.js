@@ -3,16 +3,22 @@ let load = false;
 document.getElementById('js-sortSwitcher').onclick = async (e) => {
     document.getElementById('themes_container').style.opacity = 0;
 
-    if (!load) {
-        load = true;
-        await sleep(1000);
+    if (load) return; //Dont allow randomization while in progress
 
-        document.getElementById('themes_container').innerHTML = '';
-        let random = randomize(dotfiles);
-        appendDotfiles(random);
+    load = true;
+    //Waiting for transition
+    await sleep(200);
 
-        document.getElementById('themes_container').style.opacity = 1;
+    document.getElementById('themes_container').innerHTML = '';
+    let random = randomize(dotfiles);
+    appendDotfiles(random);
 
-        load = false;
-    }
+    //Pure visual delay
+    await sleep(500);
+
+    document.getElementById('themes_container').style.opacity = 1;
+    //Waiting for transition
+    await sleep(200);
+
+    load = false;
 };
