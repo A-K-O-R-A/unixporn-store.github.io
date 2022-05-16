@@ -23,9 +23,7 @@ var searchByTags = fuzzy(dotfiles, 'tags');
 var searchByAuthor = fuzzy(dotfiles, 'author');
 var searchByTitle = fuzzy(dotfiles, 'title');
 
-load = false;
-
-document.getElementById('searchInput').onkeyup = function () {
+document.getElementById('searchInput').onkeyup = (e) => {
     let value = document.getElementById('searchInput').value;
 
     let tagResults = searchByTags(value);
@@ -37,20 +35,11 @@ document.getElementById('searchInput').onkeyup = function () {
 
     document.getElementById('themes_container').style.opacity = 0;
 
-    if (!load) {
-        load = true;
+    if (!contentLoading) {
+        contentLoading = true;
 
-        setTimeout(() => {
-            document.getElementById('themes_container').innerHTML = '';
-        }, 200);
+        changeContent(result);
 
-        setTimeout(() => {
-            document.getElementById('themes_container').style.opacity = 1;
-        }, 1000);
-
-        setTimeout(() => {
-            appendDotfiles(result);
-            load = false;
-        }, 900);
+        contentLoading = false;
     }
 };

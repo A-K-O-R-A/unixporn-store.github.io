@@ -3,25 +3,7 @@
  * @typedef {typeof dotfiles[0]} Dotfile
  */
 
-/**
- * Randomize a given array and return it
- * @template T Any Array
- * @param {T} sourceArray
- * @returns {T}
- */
-function randomize(sourceArray) {
-    for (var i = 0; i < sourceArray.length - 1; i++) {
-        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
-
-        var temp = sourceArray[j];
-
-        sourceArray[j] = sourceArray[i];
-
-        sourceArray[i] = temp;
-    }
-
-    return sourceArray;
-}
+let contentLoading = false;
 
 /**
  * Returns a promise that resolves after specified amount of ms
@@ -87,5 +69,22 @@ function appendDotfiles(dotfilesArray) {
     }
 }
 
-let random = randomize(dotfiles);
-appendDotfiles(random);
+/**
+ * This changes the content of the Theme Container while doing a transition
+ * @param {Dotfile[]} newContent
+ */
+async function changeContent(newContent) {
+    //Waiting for transition
+    await sleep(200);
+
+    //Change elements
+    document.getElementById('themes_container').innerHTML = '';
+    appendDotfiles(newContent);
+
+    //Pure visual delay
+    await sleep(200);
+
+    document.getElementById('themes_container').style.opacity = 1;
+    //Waiting for transition
+    await sleep(200);
+}
