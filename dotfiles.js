@@ -51,7 +51,7 @@ const dotfiles = [
         title: 'GNawesoME',
         author: 'manilarome',
         link: 'https://github.com/manilarome/the-glorious-dotfiles',
-        description: "Yes, GNawesOME is a weird name. GNawesOME was meant to be a GNOME clone. Instead, it became a hybrid of macOS, iOS, GNOME, and Deepin. I regret nothing.",
+        description: 'Yes, GNawesOME is a weird name. GNawesOME was meant to be a GNOME clone. Instead, it became a hybrid of macOS, iOS, GNOME, and Deepin. I regret nothing.',
         image: 'assets/gnawesome.webp',
         tags: ['awesomewm', 'rofi', 'kitty', 'fish']
     },
@@ -101,14 +101,14 @@ const dotfiles = [
         link: 'https://github.com/Rashad-707/dotfiles',
         description: 'A backup of my Linux setup',
         image: "assets/rashad-707's-dotfiles.png",
-        tags: ['dwm', 'kde', 'dunst','eww','polybar','rofi']
+        tags: ['dwm', 'kde', 'dunst', 'eww', 'polybar', 'rofi']
     },
     {
-        title: "Aether Desktop",
+        title: 'Aether Desktop',
         author: 'ilham25',
         link: 'https://github.com/ilham25/dotfiles-openbox',
         description: 'Here is my aether dotfiles openbox version ',
-        image: "assets/aether-desktop.png",
+        image: 'assets/aether-desktop.png',
         tags: ['openbox', 'urxvt', 'dunst', 'tint2', 'rofi']
-    },
-]
+    }
+];

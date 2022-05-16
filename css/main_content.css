@@ -1,39 +1,39 @@
 #main_content {
-  padding: 3rem;
+    padding: 3rem;
 }
 
 @media only screen and (max-width: 850px) {
- #main_content {
-  padding: 10px;
- }
+    #main_content {
+        padding: 10px;
+    }
 }
 
 #themes_container {
-  transition: 0.2s ease-in-out;
-  display: grid;
-  gap: 20px;
-  grid-template: auto/repeat(auto-fit, minmax(360px, 1fr));
+    transition: 0.2s ease-in-out;
+    display: grid;
+    gap: 20px;
+    grid-template: auto/repeat(auto-fit, minmax(360px, 1fr));
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background: var(--body-background-lighter);
-  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  width: -webkit-fill-available; /* Webkit browsers */
-  width: -moz-available; /* Mozilla Firefox */
-  width: fill-available;
-  flex-flow: wrap;
-  /* min-height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: var(--body-background-lighter);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: -webkit-fill-available; /* Webkit browsers */
+    width: -moz-available; /* Mozilla Firefox */
+    width: fill-available;
+    flex-flow: wrap;
+    /* min-height: 250px;
   max-height: 275px; */
-  max-width: 500px;
+    max-width: 500px;
 }
 
 .card:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .card:hover .buttons {
@@ -46,38 +46,39 @@
 }
 
 .card header {
-  padding: 0 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: inherit;
+    padding: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
 }
 
 .card img {
-  /* min-height: 250px;
+    /* min-height: 250px;
   max-height: 275px; */
-  min-width: 300px;
-  max-width: 736px;
-  border-radius: inherit;
-  transform: translate(0px, 0px);
-  transition: 0.2s ease-in-out;
-  z-index: 0;
-  width: -webkit-fill-available; /* Webkit browsers */
-  width: -moz-available; /* Mozilla Firefox */
-  width: fill-available;
+    min-width: 300px;
+    max-width: 736px;
+    border-radius: inherit;
+    transform: translate(0px, 0px);
+    transition: 0.2s ease-in-out;
+    z-index: 0;
+    width: -webkit-fill-available; /* Webkit browsers */
+    width: -moz-available; /* Mozilla Firefox */
+    width: fill-available;
 }
 
-.card:focus-within img, .card:hover img {
-  transform: translate(0px, 15px);
+.card:focus-within img,
+.card:hover img {
+    transform: translate(0px, 15px);
 }
 
 .theme-title {
-  font-family: "Jost";
-  margin: 12px 0px;
+    font-family: 'Jost';
+    margin: 12px 0px;
 }
 
 .theme-desc {
-    font-family: "Jost";
+    font-family: 'Jost';
     position: absolute;
     top: 36px;
     left: 0px;
@@ -97,14 +98,14 @@
 }
 
 .button-child {
-  font-family: "Jost";
-  padding: 8px 16px;
-  border-radius: 12px;
-  margin: 0px;
-  font-size: 16px;
-  background: var(--body-background-lighter);
-  transition: 0.2s ease-in-out;
-  font-weight: bold;
+    font-family: 'Jost';
+    padding: 8px 16px;
+    border-radius: 12px;
+    margin: 0px;
+    font-size: 16px;
+    background: var(--body-background-lighter);
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
 }
 
 .button-child:hover {
@@ -113,9 +114,9 @@
 }
 
 .buttons {
-  transition: 0.2s ease-in-out;
-  opacity: 0;
-  position: absolute;
-  bottom: 16px;
-  right: 10px;
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    bottom: 16px;
+    right: 10px;
 }
