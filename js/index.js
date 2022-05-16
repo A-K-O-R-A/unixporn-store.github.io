@@ -48,10 +48,18 @@ function appendDotfiles(dotfilesArray) {
         link.target = '_blank';
         header.appendChild(link);
 
+        /*
         // link-icon
         let linkIcon = document.createElement('i');
         linkIcon.classList.add('fas', 'fa-external-link-alt');
         link.appendChild(linkIcon);
+        */
+
+        // tags
+        let tag = document.createElement('h3');
+        tag.innerHTML = dotfile.tags[0];
+        tag.classList.add('tags');
+        link.appendChild(tag);
 
         // Buttons Thingy
         let buttonz = document.createElement('div');
