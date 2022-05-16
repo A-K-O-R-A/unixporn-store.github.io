@@ -23,12 +23,10 @@ let random = randomize(dotfiles);
 appendDotfiles(random);
 
 document.getElementById('js-sortSwitcher').onclick = async (e) => {
-    document.getElementById('themes_container').style.opacity = 0;
-
     if (contentLoading) return; //Dont allow randomization while in progress
 
     contentLoading = true;
-    changeContent(randomize(dotfiles));
+    await changeContent(randomize(dotfiles));
 
     contentLoading = false;
 };

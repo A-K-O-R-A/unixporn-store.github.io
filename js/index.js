@@ -74,6 +74,8 @@ function appendDotfiles(dotfilesArray) {
  * @param {Dotfile[]} newContent
  */
 async function changeContent(newContent) {
+    document.getElementById('themes_container').style.opacity = 0;
+
     //Waiting for transition
     await sleep(200);
 

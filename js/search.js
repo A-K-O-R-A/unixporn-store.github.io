@@ -23,22 +23,29 @@ var searchByTags = fuzzy(dotfiles, 'tags');
 var searchByAuthor = fuzzy(dotfiles, 'author');
 var searchByTitle = fuzzy(dotfiles, 'title');
 
-document.getElementById('searchInput').onkeyup = (e) => {
-    let value = document.getElementById('searchInput').value;
+/**
+ *
+ * @param {string} text
+ * @return {Dotfile[]}
+ */
+function fullSearch(text) {
+    let tagResults = searchByTags(text);
+    let authorResults = searchByAuthor(text);
+    let titleResults = searchByTitle(text);
 
-    let tagResults = searchByTags(value);
-    let authorResults = searchByAuthor(value);
+    let rawResult = [...titleResults, ...tagResults, ...authorResults];
 
-    let rawResult = [...searchByTitle(value), ...tagResults, ...authorResults];
+    return [...new Set(rawResult)];
+}
 
-    let result = [...new Set(rawResult)];
-
-    document.getElementById('themes_container').style.opacity = 0;
+document.getElementById('searchInput').onkeyup = async (e) => {
+    let searchText = document.getElementById('searchInput').value;
+    let results = fullSearch(searchText);
 
     if (!contentLoading) {
         contentLoading = true;
 
-        changeContent(result);
+        await changeContent(results);
 
         contentLoading = false;
     }
