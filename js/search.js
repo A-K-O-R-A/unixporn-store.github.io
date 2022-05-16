@@ -1,9 +1,8 @@
 /**
  * Returns a method that you can use to create your own reusable fuzzy search.
- * @template T
- * @param {T[]} items
+ * @param {Dotfile[]} items
  * @param {string} key
- * @returns {(items: T[]) => T[]}
+ * @returns {(items: Dotfile[]) => Dotfile[]}
  */
 function fuzzy(items, key) {
     return function (query) {
@@ -35,7 +34,11 @@ function fullSearch(text) {
 
     let rawResult = [...titleResults, ...tagResults, ...authorResults];
 
-    return [...new Set(rawResult)];
+    return [...new Set(rawResult)].sort((a, b) => {
+        if (a.title > b.title) return 1;
+        if (a.title < b.title) return -1;
+        return 0;
+    });
 }
 
 document.getElementById('searchInput').onkeyup = async (e) => {

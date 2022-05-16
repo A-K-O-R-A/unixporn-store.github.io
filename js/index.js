@@ -1,6 +1,6 @@
 /**
  * The data for a single setup
- * @typedef {typeof dotfiles[0]} Dotfile
+ * @typedef {{title: string;author: string;link: string;description: string;image: string;tags: string[];}} Dotfile
  */
 
 let contentLoading = false;
