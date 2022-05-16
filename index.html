@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unixporn Store</title>
-    <link rel="icon" type="image/x-icon" href="assets/unixporn.png">
- 
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unixporn Store</title>
+        <link rel="icon" type="image/x-icon" href="assets/unixporn.png" />
 
-   <!-- OpenGraph element -->
-   <meta property="og:title" content="Unixporn Store">
-   <meta property="og:site_name" content="Unixporn Store">
-   <meta property="og:url" content="https://unixporn-store.github.io/">
-   <meta property="og:description" content="A collection of dotfiles from the r/unixporn community. Find your perfect *nix rice">
-   <meta property="og:type" content="website">
-   <meta property="og:image" content="https://avatars.githubusercontent.com/u/105546120?s=200&v=4">
-   <meta property="og:color" content="#303035" />
+        <!-- OpenGraph element -->
+        <meta property="og:title" content="Unixporn Store" />
+        <meta property="og:site_name" content="Unixporn Store" />
+        <meta property="og:url" content="https://unixporn-store.github.io/" />
+        <meta property="og:description" content="A collection of dotfiles from the r/unixporn community. Find your perfect *nix rice" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/105546120?s=200&v=4" />
+        <meta property="og:color" content="#303035" />
 
-    <!-- imoprt sourcecode pro -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Source+Code+Pro:wght@300;700&display=swap" rel="stylesheet"> 
-    <!-- import fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- Jost semibold -->
-    <link href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700" rel="stylesheet">
+        <!-- imoprt sourcecode pro -->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Source+Code+Pro:wght@300;700&display=swap" rel="stylesheet" />
+        <!-- import fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+        <!-- Jost semibold -->
+        <link href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700" rel="stylesheet" />
 
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet" />
+        <link href="css/header.css" rel="stylesheet" />
+    </head>
 
-    <script type="text/javascript" src="dotfiles.js"></script>
-</head>
-<body>
-    <header id="main_header">
-        <h3 class="header-branding">Unixporn Store</h3>
-        <nav id="main_nav"><a href="index.html">Dotfiles List</a><a id="js-themeSwitcher" href="#"><i id="themeIcon" class="fas fa-sun" aria-hidden="true"></i></a><a id="js-sortSwitcher" href="#" title="random"><i class="fas fa-sort" aria-hidden="true"></i></a>
-            <div class="searchform" method="get">
-                <div class="inputgroup">
-                    <input class="searchinput" id="searchInput" type="text" placeholder="Search">
-                    <button class="btn-submit searchsubmit" id="searchButton" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
+    <body>
+        <header id="main_header">
+            <h3 class="header-branding">Unixporn Store</h3>
+            <nav id="main_nav">
+                <a href="index.html">Dotfiles List</a><a id="js-themeSwitcher" href="#"><i id="themeIcon" class="fas fa-sun" aria-hidden="true"></i></a><a id="js-sortSwitcher" href="#" title="random"><i class="fas fa-sort" aria-hidden="true"></i></a>
+                <div class="searchform" method="get">
+                    <div class="inputgroup">
+                        <input class="searchinput" id="searchInput" type="text" placeholder="Search" />
+                        <button class="btn-submit searchsubmit" id="searchButton" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main id="main_content">
-        <div id="themes_container">
-            <!-- <div class="card" style="height: 300px; width: 400px;">
+            </nav>
+        </header>
+        <main id="main_content">
+            <div id="themes_container">
+                <!-- <div class="card" style="height: 300px; width: 400px;">
                 <header>
                     <h3 class="theme-title">ArmoredVortex</h3>
                     <a href="https://github.com/ArmoredVortex">
@@ -58,24 +57,24 @@
                     </a>
                 </div>
             </div> -->
-        </div>
-    </main>
-    <footer>
-        <div style="text-align: center;">
-            <a target="_blank" href="https://github.com/unixporn-store">
-                <!-- github icon -->
-                <p style="margin: 0px; font-family: 'Source Code Pro'; font-size:12px;">Contribute <i class="fab fa-github" aria-hidden="true"></i></p>
-            </a>
-            <a target="_blank" href="https://github.com/unixporn-store/unixporn-store.github.io/#add-your-dotfiles">
-                <!-- github icon -->
-                <p style="margin: 0px; font-family: 'Source Code Pro'; font-size:12px;">Showcase your dots <i class="fas fa-palette" aria-hidden="true"></i></p>
-            </a>
-        </div>
-    </footer>
-    <script src="js/index.js"></script>
-    <script src="js/themeSwitcher.js"></script>
-    <script src="js/random.js"></script>
-    <script src="js/search.js"></script>
-</body>
-<link href="css/main_content.css" rel="stylesheet">
+            </div>
+        </main>
+        <footer>
+            <div style="text-align: center">
+                <a target="_blank" href="https://github.com/unixporn-store">
+                    <!-- github icon -->
+                    <p style="margin: 0px; font-family: 'Source Code Pro'; font-size: 12px">Contribute <i class="fab fa-github" aria-hidden="true"></i></p>
+                </a>
+                <a target="_blank" href="https://github.com/unixporn-store/unixporn-store.github.io/#add-your-dotfiles">
+                    <!-- github icon -->
+                    <p style="margin: 0px; font-family: 'Source Code Pro'; font-size: 12px">Showcase your dots <i class="fas fa-palette" aria-hidden="true"></i></p>
+                </a>
+            </div>
+        </footer>
+        <script src="js/index.js"></script>
+        <script src="js/themeSwitcher.js"></script>
+        <script src="js/random.js"></script>
+        <script src="js/search.js"></script>
+    </body>
+    <link href="css/main_content.css" rel="stylesheet" />
 </html>
